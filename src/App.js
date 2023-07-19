@@ -1,23 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
+import { Button, MantineProvider, Paper, Text } from '@mantine/core';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <MantineProvider
+        theme={{
+          fontFamily: 'Open Sans',
+        }}
+      >
+        <Paper>
+          <Text>
+            Cupidatat commodo excepteur ea dolor id amet laboris consectetur
+            quis minim ipsum veniam officia ut.
+          </Text>
+          <Text>
+            Lorem culpa consectetur cupidatat dolor eiusmod velit sint commodo
+            esse.Cupidatat commodo excepteur ea dolor id amet laboris
+            consectetur quis minim ipsum veniam officia ut.
+          </Text>
+        </Paper>
+        <Button>Hello world</Button>
+        <Button>Hello world</Button>
+      </MantineProvider>
     </div>
   );
 }
