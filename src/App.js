@@ -7,6 +7,31 @@ function App() {
       <MantineProvider
         theme={{
           fontFamily: 'Open Sans',
+          colorScheme: 'dark',
+          fontSizes: { md: 80 },
+          radius: { sm: 60 },
+          loaders: ' bars',
+          colors: {
+            blue: [
+              '#4263eb',
+              '#228be6',
+              '#1971c2',
+              '#3bc9db',
+              '#15aabf',
+              '#63e6be',
+              '#ffe066',
+              '#f783ac',
+              '#e03131',
+              '#212529',
+            ],
+          },
+        }}
+        styles={{
+          Button: (theme) => ({
+            root: {
+              backgroundColor: theme.colors.blue[2],
+            },
+          }),
         }}
       >
         <Paper>
@@ -22,6 +47,10 @@ function App() {
         </Paper>
         <Button>Hello world</Button>
         <Button>Hello world</Button>
+
+        <MantineProvider theme={{ fontFamily: 'Greycliff CF, sans-serif' }}>
+          <Button>Greycliff CF button</Button>
+        </MantineProvider>
       </MantineProvider>
     </div>
   );
